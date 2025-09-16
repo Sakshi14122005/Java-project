@@ -1,36 +1,44 @@
-package Demo;
-
-public class Employee3 {
-
-	    private int empId;
-	    private String empName;
-	    private String empDesignation;
-	    private double empSal;
-
-	    public Employee3(int empId, String empName, String empDesignation, double empSal) {
-	        this.empId = empId;
-	        this.empName = empName;
-	        this.empDesignation = empDesignation;
-	        this.empSal = empSal;
-	    }
-
-	    @Override
-	    public String toString() {
-	        return "Employee{" +
-	                "empId=" + empId +
-	                ", empName='" + empName + '\'' +
-	                ", empDesignation='" + empDesignation + '\'' +
-	                ", empSal=" + empSal +
-	                '}';
-	    }
-
-	    public static void main(String[] args) {
-	        Employee3 employee1 = new Employee3(101, "John Doe", "Manager", 50000.0);
-	        Employee3 employee2 = new Employee3(102, "Jane Smith", "Developer", 45000.0);
-
-	        System.out.println(employee1);
-	        System.out.println(employee2);
-	    }
-	}
-
-
+package Encapsulation; 
+ 
+class Employee{ 
+  
+ private int Emp_id; 
+ private String Emp_Name; 
+ private String Emp_Desig; 
+  
+ 
+ 
+ public int getEmp_id() { 
+  return Emp_id; 
+ } 
+ public void setEmp_id(int emp_id) { 
+  Emp_id = emp_id; 
+ } 
+ public String getEmp_Name() { 
+  return Emp_Name; 
+ } 
+ public void setEmp_Name(String emp_Name) { 
+  Emp_Name = emp_Name; 
+ } 
+ public String getEmp_Desig() { 
+  return Emp_Desig; 
+ } 
+ public void setEmp_Desig(String emp_Desig) { 
+  Emp_Desig = emp_Desig; 
+ } 
+  
+} 
+ 
+public class Employee3{ 
+ 
+ public static void main(String[] args) { 
+  Employee e1 = new Employee(); 
+  e1.setEmp_id(1); 
+  e1.setEmp_Name("Ram"); 
+  e1.setEmp_Desig("Engineer"); 
+  System.out.println(e1.getEmp_id()); 
+  System.out.println(e1.getEmp_Name()); 
+  System.out.println(e1.getEmp_Desig()); 
+ } 
+  
+}
