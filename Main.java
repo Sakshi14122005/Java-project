@@ -1,25 +1,26 @@
-package Product;
-
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter ID: ");
-        int id = sc.nextInt();
-        sc.nextLine(); 
-
-        System.out.print("Enter Name: ");
-        String name = sc.nextLine();
-
-        System.out.print("Enter Price: ");
-        double price = sc.nextDouble();
-
-        new Product(id, name, price);
-
-        sc.close();
-    }
+package code;
+interface Shape {
+ void area(); 
 }
 
+class Rectangle implements Shape {
+ int length, breadth;
 
+ Rectangle(int l, int b) {
+     length = l;
+     breadth = b;
+ }
+
+ public void area() {
+     int a = length * breadth;
+     System.out.println("Area of Rectangle: " + a);
+ }
+}
+
+public class Main {
+ public static void main(String[] args) {
+     Rectangle rect = new Rectangle(10, 5);
+
+     rect.area();
+ }
+}
