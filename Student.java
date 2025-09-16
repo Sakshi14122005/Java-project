@@ -1,46 +1,22 @@
-package code;
-import java.util.Scanner;
-
-class StudentTest {
-    String name;
-    int age;
-    float grade;
-
-    // Constructor
-    StudentTest(String name, int age, float grade) {
-        this.name = name;
-        this.age = age;
-        this.grade = grade;
-    }
-
-    // Method to display student info
-    void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Grade: " + grade);
-    }
-}
-
-public class Student {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter student name: ");
-        String name = sc.nextLine();
-
-        System.out.print("Enter student age: ");
-        int age = sc.nextInt();
-
-        System.out.print("Enter student grade: ");
-        float grade = sc.nextFloat();
-
+package aaaa;
+class Calculator { 
+	 
+    int add(int a, int b) { 
+        return a + b; 
+    } 
      
-        StudentTest s1 = new StudentTest(name, age, grade);  //create object using constructor
-
-      
-        System.out.println("\nStudent Information:");
-        s1.display();
-
-        sc.close();
-    }
-}
+    int add(int a, int b, int c) { 
+        return a + b + c; 
+    } 
+    double add(double a, double b) { 
+        return a + b; 
+    } 
+} 
+public class Student { 
+    public static void main(String[] args) { 
+        Calculator calc = new Calculator(); 
+        System.out.println(calc.add(10, 20));        
+        System.out.println(calc.add(10, 20, 30));    
+        System.out.println(calc.add(5.5, 4.5));      
+    } 
+} 
