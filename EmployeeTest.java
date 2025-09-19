@@ -1,43 +1,40 @@
-package code;
-import java.util.Scanner;
+package codechef;
 
-class Employee {
-    int empId;
-    String name;
-    double salary;
+	class Employee {
+	    int id;
+	    String name;
+	    static String company = "TechSoft"; 
 
-    // Constructor
-    Employee(int id, String name, double salary) {
-        this.empId = id;
-        this.name = name;
-        this.salary = salary;
-    }
 
-    void display() {
-        System.out.println("Employee ID: " + empId);
-        System.out.println("Name: " + name);
-        System.out.println("Salary: ₹" + salary);
-    }
-}
+	    Employee(int id, String name) {
+	        this.id = id;
+	        this.name = name;
+	    }
 
-public class EmployeeTest {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+	    void display() {
+	        System.out.println("ID: " + this.id + ", Name: " + this.name + ", Company: " + company);
+	    }
 
-        System.out.print("Enter employee ID: ");
-        int id = sc.nextInt();
-        sc.nextLine(); // Consume newline
+	    static void changeCompany(String newCompany) {
+	        company = newCompany;
+	    }
+	}
 
-        System.out.print("Enter employee name: ");
-        String name = sc.nextLine();
+	public class EmployeeTest {
+	    public static void main(String[] args) {
 
-        System.out.print("Enter employee salary: ");
-        double salary = sc.nextDouble();
+	        Employee e1 = new Employee(101, "Ajun");
+	        Employee e2 = new Employee(102, "Sneha");
 
-        Employee emp = new Employee(id, name, salary);
-        System.out.println("\nEmployee Details:");
-        emp.display();
+	        e1.display();
+	        e2.display();
 
-        sc.close();
-    }
-}
+
+	        Employee.changeCompany("NextGen Solutions");
+
+
+	        e1.display();
+	        e2.display();
+	    }
+	}
+
